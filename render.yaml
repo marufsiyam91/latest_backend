@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: your-app-name
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: SECRET_KEY
+        value: your_secret_key
+      - key: STRIPE_SECRET_KEY
+        value: your_stripe_secret_key
+      - key: MONGODB_URI
+        value: your_mongodb_uri
+      - key: STRIPE_WEBHOOK_SECRET
+        value: your_stripe_webhook_secret
+      - key: ADMIN_EMAIL
+        value: admin@example.com
